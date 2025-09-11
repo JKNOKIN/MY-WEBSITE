@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PERSONAL PAGE</title>
+    <title>KHOSHOO ELSAYED - PERSONAL PAGE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-  
 </head>
 <body>
     <div class="container">
@@ -15,7 +15,6 @@
                 <img src="ME.jpeg" alt="صورة شخصية">
             </div>
         </header>
-        
         
         <div class="content">
             <section class="about">
@@ -31,18 +30,37 @@
                     <li><i class="fas fa-music"></i> الاستماع إلى الموسيقى</li>
                 </ul>
             </section>
+            
+            <section class="student-card">
+                <h2><i class="fas fa-graduation-cap"></i> بطاقة الطالب</h2>
+                <div class="student-info">
+                    <div class="info-item">
+                        <span class="info-label">الاسم:</span>
+                        <span class="info-value" id="studentName">KHOSHOO ELSAYED</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">العمر:</span>
+                        <span class="info-value" id="studentAge">20 سنة</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">الصف:</span>
+                        <span class="info-value" id="studentGrade">خريجه</span>
+                    </div>
+                </div>
+                <button class="console-btn" onclick="printStudentInfo()">
+                    <i class="fas fa-terminal"></i> عرض في Console
+                </button>
+            </section>
         </div>
         
         <section class="achievements">
-            <h2>الإنجازات <span class="corrected-title"></span></h2>
+            <h2>الإنجازات</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <h3>اتخرجت من كلية تكنولوجيا</h3>
-                        <p>بونيو 2023</p>
+                        <p>يونيو 2023</p>
                         <p>خريجة بامتياز</p>
-                        <div class="corrected">
-                        </div>
                     </div>
                 </div>
                 
@@ -64,11 +82,54 @@
             </div>
         </section>
         
+        <!-- قسم أساسيات JavaScript -->
+        <section class="js-fundamentals">
+            <h2><i class="fab fa-js"></i> أساسيات JavaScript</h2>
+            <button class="console-btn" onclick="runJsFundamentals()">
+                <i class="fas fa-play"></i> تشغيل الأساسيات
+            </button>
+        </section>
+        
+        <!-- قسم المتجر الإلكتروني -->
+        <section class="online-shop">
+            <h2><i class="fas fa-shopping-cart"></i> متجر إلكتروني بسيط</h2>
+            <button class="console-btn" onclick="runOnlineShop()">
+                <i class="fas fa-store"></i> تشغيل المتجر
+            </button>
+        </section>
+        
+        <!-- قسم التواصل -->
+        <section class="contact">
+            <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+            
+            <form class="contact-form" onsubmit="sendMessage(event)">
+                <div class="form-group">
+                    <label for="name">اسمك</label>
+                    <input type="text" id="name" placeholder="أدخل اسمك" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">بريدك الإلكتروني</label>
+                    <input type="email" id="email" placeholder="أدخل بريدك الإلكتروني" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">رسالتك</label>
+                    <textarea id="message" placeholder="أدخل رسالتك هنا..." required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> إرسال الرسالة
+                </button>
+            </form>
+        </section>
+        
         <footer>
-            <p>Contact me: <a href="mailto:developer@example.com">khoshooelsayed@gmail.com</a></p>
+            <p>Contact me: <a href="mailto:khoshooelsayed@gmail.com">khoshooelsayed@gmail.com</a></p>
             <p>© 2025 Portfolio. All rights reserved.</p>
         </footer>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
